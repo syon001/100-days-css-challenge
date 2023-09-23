@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="search">
+          <input type="text" class="searchfield" placeholder="Start typing ..." value="" />
+              <button type="button" class="button"><span class="fa fa-search"></span></button>
+              <ul class="suggestions clearfix"></ul>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script>
+        $(".searchfield").keyup(function () {
+	var $suggestions = $(".suggestions");
+	var text = $(this).val();
+	if (text.length) {
+		$suggestions.html("").addClass("active");
+		$suggestions.append($("<li />", { html: "<b>" + text + "</b>" }));
+		$suggestions.append(
+			$("<li />", { html: "Veritatis et <b>" + text + "</b>" })
+		);
+		$suggestions.append(
+			$("<li />", { html: "ut aliquid ex <b>" + text + "</b> vero eos" })
+		);
+	} else {
+		$suggestions.html("").removeClass("active");
+	}
+});
+
+      </script>
+</body>
+</html>
