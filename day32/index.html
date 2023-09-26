@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="counter">
+              <div class="minus">
+                  <div class="line"></div>
+              </div>
+              <div class="number">
+                  <span class="fadeIn">0</span>
+              </div>
+              <div class="plus">
+                  <div class="line-h"></div>
+                  <div class="line-v"></div>
+              </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script>
+        var number = 0;
+var $number = $(".number");
+
+$(".minus").bind("click", function () {
+	updateNumber(-1);
+});
+
+$(".plus").bind("click", function () {
+	updateNumber(1);
+});
+
+function updateNumber(value) {
+	number += value;
+	$number.find(".fadeOutDown").remove(); // remove old numbers
+	$number.find(".fadeOutUp").remove(); // remove old numbers
+	$number.find("span").removeClass(); // clear current number
+	if (value > 0) {
+		// fadeUp Animation
+		$number.find("span").addClass("fadeOutUp");
+		$number.append('<span class="fadeInUp">' + number + "</span>");
+	} else {
+		// fadeDown Animation
+		$number.find("span").addClass("fadeOutDown");
+		$number.append('<span class="fadeInDown">' + number + "</span>");
+	}
+}
+
+      </script>
+</body>
+</html>
