@@ -1,5 +1,6 @@
 @import url(https://100dayscss.com/codepen/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
 .frame {
   position: absolute;
   top: 50%;
@@ -26,6 +27,7 @@
   background: #fff;
   box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.3);
 }
+
 .center .top {
   position: absolute;
   z-index: 1;
@@ -35,9 +37,11 @@
   height: 40px;
   background: #3D4D5E;
 }
+
 .center input[type=radio] {
   display: none;
 }
+
 .center .tab {
   position: relative;
   float: left;
@@ -51,21 +55,26 @@
   font-size: 14px;
   transition: background 0.5s ease-in-out;
 }
+
 .center .tab.search {
   float: right;
 }
+
 .center .tab:hover {
   color: #fff;
 }
+
 .center input[type=radio]:checked + .tab {
   background: #5DA2ED;
   color: #fff;
 }
+
 .center .content {
   position: absolute;
   top: 40px;
   color: #000;
 }
+
 .center .content .box {
   position: absolute;
   top: 0;
@@ -76,6 +85,7 @@
   padding: 25px;
   transition: all 0.3s ease-in;
 }
+
 .center .content .box h1 {
   font-weight: 400;
   font-size: 16px;
@@ -83,9 +93,11 @@
   margin: 0;
   padding: 0;
 }
+
 .center .content .box p {
   margin: 17px 0;
 }
+
 .center .content .box p span {
   display: block;
   height: 4px;
